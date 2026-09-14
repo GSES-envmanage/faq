@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="서울대학교 환경관리학과 학사·졸업·생활 FAQ" />
+    <title>환경관리학과 FAQ</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="./" aria-label="환경관리학과 FAQ 홈">
+          <img
+            class="brand-logo"
+            src="./assets/gses-logo.png"
+            alt="서울대학교 환경대학원"
+          />
+          <span class="brand-name">
+            <strong>서울대학교 환경대학원 환경관리학과</strong>
+            <span>Department of Environmental Management</span>
+          </span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">DEPARTMENT OF ENVIRONMENTAL MANAGEMENT</p>
+        <h1 id="page-title">서울대학교 환경대학원 환경관리학과 FAQ</h1>
+        <p class="intro-copy">환경관리학과 학생들이 자주 묻는 질문을 확인하세요.</p>
+
+        <div class="search-wrap">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="m16.2 16.2 4 4"></path>
+          </svg>
+          <label class="sr-only" for="faq-search">FAQ 검색</label>
+          <input id="faq-search" type="search" placeholder="궁금한 내용을 검색해 보세요" autocomplete="off" />
+          <button class="clear-search" type="button" aria-label="검색어 지우기" hidden>지우기</button>
+        </div>
+      </section>
+
+      <section class="faq-section" aria-labelledby="faq-heading">
+        <h2 class="sr-only" id="faq-heading">자주 묻는 질문</h2>
+        <nav class="category-list" aria-label="FAQ 카테고리">
+          <button type="button" class="category active" data-category="전체" aria-pressed="true">전체</button>
+          <button type="button" class="category" data-category="수강신청" aria-pressed="false">수강신청</button>
+          <button type="button" class="category" data-category="수료학점" aria-pressed="false">수료학점</button>
+          <button type="button" class="category" data-category="졸업" aria-pressed="false">졸업</button>
+          <button type="button" class="category" data-category="논문" aria-pressed="false">논문</button>
+          <button type="button" class="category" data-category="생활" aria-pressed="false">생활</button>
+          <button type="button" class="category" data-category="기타" aria-pressed="false">기타</button>
+        </nav>
+
+        <div class="result-bar">
+          <p><strong id="result-count">0</strong>개의 질문</p>
+        </div>
+
+        <div class="faq-list" id="faq-list">
+          <details class="faq-item" data-categories="수강신청">
+            <summary>
+              <span class="question-mark">Q</span>
+              <span class="question-text">수강신청 변경 기간이 지나면 과목을 변경할 수 있나요?</span>
+              <span class="chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="answer">
+              <span class="answer-mark">A</span>
+              <div><p>화면 구성을 확인하기 위한 예시 답변입니다. 실제 학사 안내 내용은 관리자 페이지에서 등록합니다.</p></div>
+            </div>
+          </details>
+
+          <details class="faq-item" data-categories="수료학점 졸업">
+            <summary>
+              <span class="question-mark">Q</span>
+              <span class="question-text">석사과정 수료에 필요한 학점은 몇 학점인가요?</span>
+              <span class="chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="answer">
+              <span class="answer-mark">A</span>
+              <div><p>한 질문에 여러 카테고리를 지정한 예시입니다. 이 질문은 수료학점과 졸업에서 모두 검색됩니다.</p></div>
+            </div>
+          </details>
+
+          <details class="faq-item" data-categories="졸업">
+            <summary>
+              <span class="question-mark">Q</span>
+              <span class="question-text">졸업을 위해 반드시 확인해야 하는 요건은 무엇인가요?</span>
+              <span class="chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="answer">
+              <span class="answer-mark">A</span>
+              <div><p>관리자가 입력한 서식, 링크와 안내 사항이 이 영역에 표시됩니다.</p></div>
+            </div>
+          </details>
+
+          <details class="faq-item" data-categories="논문">
+            <summary>
+              <span class="question-mark">Q</span>
+              <span class="question-text">학위논문 심사는 언제 신청하나요?</span>
+              <span class="chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="answer">
+              <span class="answer-mark">A</span>
+              <div><p>논문 관련 일정과 제출 서류를 글과 이미지로 안내할 수 있습니다.</p></div>
+            </div>
+          </details>
+
+          <details class="faq-item" data-categories="생활">
+            <summary>
+              <span class="question-mark">Q</span>
+              <span class="question-text">학생증 발급과 교내 시설 이용은 어떻게 하나요?</span>
+              <span class="chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="answer">
+              <span class="answer-mark">A</span>
+              <div><p>학생 생활과 관련된 자주 묻는 내용을 등록할 수 있습니다.</p></div>
+            </div>
+          </details>
+
+          <details class="faq-item" data-categories="기타">
+            <summary>
+              <span class="question-mark">Q</span>
+              <span class="question-text">학과 행정실에 문의하려면 어떻게 해야 하나요?</span>
+              <span class="chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="answer">
+              <span class="answer-mark">A</span>
+              <div><p>연락처나 외부 페이지 링크 등을 안내할 수 있습니다.</p></div>
+            </div>
+          </details>
+        </div>
+
+        <div class="empty-state" id="empty-state" hidden>
+          <p>검색 결과가 없습니다.</p>
+          <span>다른 검색어를 입력하거나 카테고리를 변경해 보세요.</span>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <p>서울특별시 관악구 관악로 1 서울대학교 환경대학원</p>
+        <p>© Seoul National University. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="./config.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

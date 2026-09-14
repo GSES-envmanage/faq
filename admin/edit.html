@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ 작성 | 환경관리학과</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="admin-header">
+      <a class="admin-brand" href="./posts.html">
+        <img src="../assets/gses-logo.png" alt="" />
+        <span>환경관리학과 FAQ 관리</span>
+      </a>
+      <nav><a href="../index.html" target="_blank" rel="noopener">FAQ 보기</a><a href="#" data-logout>로그아웃</a></nav>
+    </header>
+
+    <main class="admin-main editor-main">
+      <div class="page-heading editor-heading">
+        <div>
+          <a class="back-link" href="./posts.html">← 글 목록</a>
+          <h1 id="editor-title">새 FAQ 등록</h1>
+        </div>
+      </div>
+
+      <form class="editor-form" id="faq-form">
+        <section class="form-panel">
+          <div class="field">
+            <label for="question">질문 <em>필수</em></label>
+            <input id="question" type="text" placeholder="학생들이 자주 묻는 질문을 입력하세요" required />
+          </div>
+
+          <fieldset class="field">
+            <legend>카테고리 <em>복수 선택 가능</em></legend>
+            <div class="checkbox-grid">
+              <label><input type="checkbox" name="category" value="수강신청" /> 수강신청</label>
+              <label><input type="checkbox" name="category" value="수료학점" /> 수료학점</label>
+              <label><input type="checkbox" name="category" value="졸업" /> 졸업</label>
+              <label><input type="checkbox" name="category" value="논문" /> 논문</label>
+              <label><input type="checkbox" name="category" value="생활" /> 생활</label>
+              <label><input type="checkbox" name="category" value="기타" /> 기타</label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label id="answer-label">답변 <em>필수</em></label>
+            <div class="editor-shell">
+              <div class="editor-toolbar" role="toolbar" aria-label="답변 서식">
+                <button type="button" data-command="bold" title="굵게"><strong>B</strong></button>
+                <button type="button" data-command="underline" title="밑줄"><u>U</u></button>
+                <button type="button" data-command="insertUnorderedList" title="글머리표">• 목록</button>
+                <button type="button" data-command="createLink" title="링크">링크</button>
+              </div>
+              <div class="answer-editor" id="answer-editor" contenteditable="true" role="textbox" aria-labelledby="answer-label" aria-multiline="true" data-placeholder="답변 내용을 입력하세요"></div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="image-upload">첨부파일</label>
+            <div class="upload-box">
+              <input id="image-upload" type="file" accept=".jpg,.jpeg,.png,.webp,.gif,.pdf,.hwp,.docx,image/jpeg,image/png,image/webp,image/gif,application/pdf,application/x-hwp,application/vnd.openxmlformats-officedocument.wordprocessingml.document" multiple />
+              <p>이미지, PDF, HWP, DOCX 파일을 첨부할 수 있습니다. 파일당 최대 20MB입니다.</p>
+              <ul id="upload-list"></ul>
+              <div id="existing-images"></div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="settings-panel">
+          <h2>게시 설정</h2>
+          <div class="field compact-field">
+            <label for="display-order">표시 순서</label>
+            <input id="display-order" type="number" value="1" min="1" />
+          </div>
+          <label class="publish-toggle"><input id="is-published" type="checkbox" checked /> <span><strong>공개</strong><small>FAQ 페이지에 표시합니다.</small></span></label>
+          <div class="form-actions">
+            <button class="primary-button" type="submit">저장</button>
+            <a class="secondary-button" href="./posts.html">취소</a>
+          </div>
+          <button class="delete-button" id="delete-post" type="button" hidden>이 FAQ 삭제</button>
+          <p class="form-message" id="editor-message" role="alert" hidden></p>
+        </aside>
+      </form>
+    </main>
+    <script src="../config.js"></script>
+    <script src="./auth.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

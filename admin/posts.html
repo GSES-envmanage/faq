@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ 관리 | 환경관리학과</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="admin-header">
+      <a class="admin-brand" href="./posts.html">
+        <img src="../assets/gses-logo.png" alt="" />
+        <span>환경관리학과 FAQ 관리</span>
+      </a>
+      <nav>
+        <a href="../index.html" target="_blank" rel="noopener">FAQ 보기</a>
+        <a href="#" data-logout>로그아웃</a>
+      </nav>
+    </header>
+
+    <main class="admin-main">
+      <div class="page-heading">
+        <div>
+          <p class="admin-label">FAQ CONTENT</p>
+          <h1>FAQ 글 관리</h1>
+        </div>
+        <a class="primary-button" href="./edit.html">새 FAQ 등록</a>
+      </div>
+
+      <section class="list-panel" aria-labelledby="post-list-title">
+        <h2 class="sr-only" id="post-list-title">등록된 FAQ 목록</h2>
+        <div class="list-tools">
+          <label class="admin-search">
+            <span class="sr-only">FAQ 검색</span>
+            <input id="admin-search" type="search" placeholder="질문 검색" />
+          </label>
+          <label>
+            <span class="sr-only">카테고리</span>
+            <select id="admin-category">
+              <option value="전체">전체 카테고리</option>
+              <option>수강신청</option><option>수료학점</option><option>졸업</option>
+              <option>논문</option><option>생활</option><option>기타</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th class="order-cell">순서</th><th>질문</th><th>카테고리</th><th>상태</th><th>수정일</th><th class="action-cell">관리</th></tr></thead>
+            <tbody id="post-rows"><tr><td colspan="6" class="table-message">글을 불러오는 중입니다.</td></tr></tbody>
+          </table>
+        </div>
+        <div class="list-footer">
+          <p><strong id="admin-result-count">0</strong>개의 글</p>
+          <button class="secondary-button" id="save-order" type="button">표시 순서 저장</button>
+        </div>
+      </section>
+    </main>
+    <script src="../config.js"></script>
+    <script src="./auth.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

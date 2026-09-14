@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>관리자 로그인 | 환경관리학과 FAQ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="login-page">
+    <main class="login-shell">
+      <section class="login-brand">
+        <img src="../assets/gses-logo.png" alt="서울대학교 환경대학원" />
+        <span>
+          <strong>서울대학교 환경대학원 환경관리학과</strong>
+          <small>Department of Environmental Management</small>
+        </span>
+      </section>
+      <section class="login-card" aria-labelledby="login-title">
+        <p class="admin-label">FAQ ADMIN</p>
+        <h1 id="login-title">관리자 로그인</h1>
+        <p class="login-help">FAQ를 등록하고 수정하려면 로그인하세요.</p>
+        <form id="login-form">
+          <label for="email">이메일</label>
+          <input id="email" name="email" type="email" placeholder="admin@example.com" required />
+          <label for="password">비밀번호</label>
+          <input id="password" name="password" type="password" placeholder="비밀번호 입력" required />
+          <button class="primary-button login-button" type="submit">로그인</button>
+        </form>
+        <p class="form-message" id="login-message" role="alert" hidden></p>
+      </section>
+    </main>
+    <script src="../config.js"></script>
+    <script src="./auth.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
