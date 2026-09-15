@@ -12,7 +12,7 @@ create table public.faqs (
   updated_at timestamptz not null default now(),
   constraint faqs_categories_required check (cardinality(categories) >= 1),
   constraint faqs_categories_allowed check (
-    categories <@ array['수강신청','수료학점','졸업','논문','생활','기타']::text[]
+    categories <@ array['수료학점','졸업','논문','생활','기타']::text[]
   )
 );
 
