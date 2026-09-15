@@ -68,7 +68,7 @@ h1 {
 .clear-search { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); border: 0; background: transparent; color: var(--muted); font-size: 14px; cursor: pointer; }
 
 .faq-section { padding: 0 0 110px; }
-.category-list { display: grid; grid-template-columns: repeat(7, 1fr); border: 1px solid var(--line); border-right: 0; }
+.category-list { display: grid; grid-template-columns: repeat(6, 1fr); border: 1px solid var(--line); border-right: 0; }
 .category { min-height: 56px; padding: 10px 8px; border: 0; border-right: 1px solid var(--line); background: var(--white); font-weight: 600; cursor: pointer; transition: color .15s ease, background .15s ease; }
 .category:hover { background: #f1fbf7; color: #08794d; }
 .category:focus-visible { position: relative; outline: 3px solid rgba(28, 201, 131, .30); outline-offset: -3px; }
